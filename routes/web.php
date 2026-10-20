@@ -15,11 +15,3 @@ Route::get('/', function () {
 
     return view('dashboard', compact('books', 'members', 'authorsCount', 'loans'));
 });
-
-Route::get('/api/books', function () {
-    return response()->json(Book::with(['author', 'publisher'])->get());
-});
-
-Route::get('/api/loans', function () {
-    return response()->json(Loan::with(['member', 'book'])->get());
-});

@@ -14,6 +14,7 @@ class Member extends Model
         'name',
         'email',
         'phone',
+        'address',
     ];
 
     public function loans(): HasMany
